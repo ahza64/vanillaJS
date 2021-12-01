@@ -8,7 +8,7 @@ let ticketPrice = +movieSelect.value; //+ changes string to number
 
 //save movie and price
 function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem('slectedMovieIndex', movieIndex);
+  localStorage.setItem('selectedMovieIndex', movieIndex);
   localStorage.setItem('selectedMoviePrice', moviePrice);
 }
 
