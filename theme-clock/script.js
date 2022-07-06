@@ -21,6 +21,7 @@ toggleEl.addEventListener('click', (e) => {
 
 function setTime() {
   const time = new Date()
+  const date = time.getDate()
   const month = time.getMonth()
   const day = time.getDay()
   const hours = time.getHours()
@@ -34,6 +35,7 @@ function setTime() {
   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`
 
   timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes}${ampm}`
+  dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="cirlce">${date}</span>`
 }
 
 // stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
